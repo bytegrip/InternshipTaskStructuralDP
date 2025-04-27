@@ -30,6 +30,12 @@ public class TextFormattingFacade
         baseFormatter ??= new BaseTextFormatter();
         return new UnderlineFormatter(baseFormatter);
     }
+    
+    public static ITextFormatter CreateEmptyFormatter(ITextFormatter? baseFormatter = null)
+    {
+        baseFormatter ??= new BaseTextFormatter();
+        return new EmptyFormatter(baseFormatter);
+    }
 
     public static ITextFormatter CreateColorFormatter(string foreground, string background = "default", ITextFormatter? baseFormatter = null)
     {

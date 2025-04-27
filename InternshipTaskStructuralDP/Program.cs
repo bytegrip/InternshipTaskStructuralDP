@@ -18,6 +18,9 @@ TextFormattingFacade.ApplyFormat(sampleText, colorFormatter);
             
 var boldItalic = TextFormattingFacade.CreateBoldFormatter(TextFormattingFacade.CreateItalicFormatter());
 TextFormattingFacade.ApplyFormat(sampleText, boldItalic);
+
+var noFormat = TextFormattingFacade.CreateEmptyFormatter();
+TextFormattingFacade.ApplyFormat(sampleText, noFormat);
             
 var complexFormatter = TextFormattingFacade.CreateBoldFormatter(
     TextFormattingFacade.CreateItalicFormatter(
